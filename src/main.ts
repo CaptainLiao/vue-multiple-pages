@@ -1,10 +1,20 @@
 import Vue from "vue";
-import App from "./App.vue";
 import router from "./router";
 
 Vue.config.productionTip = false;
 
 new Vue({
   router,
-  render: h => h(App)
+  render(h) {
+    return h('div', {
+      attrs: {
+        id: 'app'
+      }
+    }, [
+      h('keep-alive', [
+        this.$route.meta.keepAlive ? h('router-view') : ''
+      ]),
+      !this.$route.meta.keepAlive && h('router-view')
+    ])
+  }
 }).$mount("#app");

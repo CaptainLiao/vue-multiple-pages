@@ -1,14 +1,29 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <span @click="toHome">Home</span>
+      <span> | </span>
+      <span @click="toAbout">About</span>
     </div>
-    <router-view />
   </div>
 </template>
-
+<script lang="ts">
+import vue from 'vue'
+export default vue.extend({
+  methods: {
+    toHome() {
+      this.$router.push({path: '/home'})
+    },
+    toAbout() {
+      this.$router.push({path: '/abc'})
+    },
+  }
+})
+</script>
 <style lang="scss">
+* {
+  margin: 0;
+}
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

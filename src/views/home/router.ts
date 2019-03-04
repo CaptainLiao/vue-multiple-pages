@@ -12,7 +12,7 @@ export default new Router({
   routes: [
     { path: '*', component: NotFoundComponent },
     {
-      path: "/",
+      path: "/home",
       name: "home",
       meta: {
         keepAlive: true,
