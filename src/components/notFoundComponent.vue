@@ -4,7 +4,8 @@
 </template>
 
 <script>
-export default {
+import vue from 'vue'
+export default vue.extend( {
   data () {
     return {
     };
@@ -17,7 +18,7 @@ export default {
   mounted() {},
 
   methods: {}
-}
+})
 
 </script>
 <style lang='scss' scoped>

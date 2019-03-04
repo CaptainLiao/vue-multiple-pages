@@ -14,7 +14,7 @@ module.exports = {
       //chunks: ['chunk-vendors', 'chunk-common', 'about']
     },
     'home/home': {
-      entry: 'src/views/home/home-main.js',
+      entry: 'src/views/home/_entry.js',
 
       //chunks: ['chunk-vendors', 'chunk-common', 'home/home']
     },

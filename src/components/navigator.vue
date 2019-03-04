@@ -21,6 +21,7 @@ export default vue.extend({
     },
     toAbout() {
       this.$router.push({path: '/about'})
+      //window.location.href ='../about'
     },
   }
 })
