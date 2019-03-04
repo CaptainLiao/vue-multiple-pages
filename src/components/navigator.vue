@@ -3,7 +3,9 @@
     <div id="nav">
       <span @click="toHome">Home</span>
       <span> | </span>
-      <span @click="toAbout">About</span>
+      <span @click="toAbc">toAbc</span>
+      <span> | </span>
+      <span @click="toAbout">toAbout</span>
     </div>
   </div>
 </template>
@@ -12,10 +14,13 @@ import vue from 'vue'
 export default vue.extend({
   methods: {
     toHome() {
-      this.$router.push({path: '/home'})
+      this.$router.push({path: '/home/home'})
+    },
+    toAbc() {
+      this.$router.push({path: '/home/abc'})
     },
     toAbout() {
-      this.$router.push({path: '/abc'})
+      this.$router.push({path: '/about'})
     },
   }
 })

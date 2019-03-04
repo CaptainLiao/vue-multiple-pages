@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import home from './home.vue'
-import router from './router'
+import router from './router/router'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

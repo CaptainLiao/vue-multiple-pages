@@ -11,12 +11,12 @@ module.exports = {
     about: {
       entry: 'src/views/about-main.js',
 
-      chunks: ['chunk-vendors', 'chunk-common', 'about']
+      //chunks: ['chunk-vendors', 'chunk-common', 'about']
     },
-    home: {
+    'home/home': {
       entry: 'src/views/home/home-main.js',
 
-      chunks: ['chunk-vendors', 'chunk-common', 'home']
+      //chunks: ['chunk-vendors', 'chunk-common', 'home/home']
     },
   }
 
