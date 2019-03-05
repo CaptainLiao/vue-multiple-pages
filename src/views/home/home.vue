@@ -22,6 +22,22 @@
       <div>第三页打印内容</div>
     </div>
 
+  <form id="myForm" ref="myForm" name="myForm" enctype="multipart/form-data">
+    <div>
+      <label for="username">Enter name:</label>
+      <input type="text" id="username" name="username">
+    </div>
+    <div>
+      <label for="useracc">Enter account number:</label>
+      <input type="text" id="useracc" name="useracc">
+    </div>
+    <div>
+      <label for="userfile">Upload file:</label>
+      <input type="file" id="userfile" name="userfile">
+    </div>
+    <input @click="tapSubmit" value="Submit!">
+  </form>
+
     <Navigator></Navigator>
   </div>
 </template>
@@ -51,9 +67,21 @@ export default Vue.extend({
   },
 
   methods: {
+    tapSubmit() {
+      let formData = new FormData(this.$refs.myForm as HTMLFormElement);
+      // let file = document.querySelector('[type=file]');
+      // if (!file) return
+      // formData.append('username', 'Chris');
+      // formData.append('useracc', 'sdf584585');
+      // formData.append('userfile', file.files[0]);
+      API.querySome({
+        data: formData
+      })
+    },
     tapPrint() {
       let body = Object.keys(this.$refs)
-        .map(k => this.$refs[k].outerHTML)
+        .filter(k => k.indexOf('page') != -1)
+        .map(k => (this.$refs[k] as HTMLElement).outerHTML)
         .join('');
       let style = `
             .border {
