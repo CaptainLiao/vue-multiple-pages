@@ -20,7 +20,7 @@ export default vue.extend({
       this.$router.push({path: '/home/abc'})
     },
     toAbout() {
-      this.$router.push({path: '/about'})
+      this.$router.push({path: '/home/about'})
       //window.location.href ='../about'
     },
   }

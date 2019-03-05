@@ -24,7 +24,3 @@ function scrollBehavior(to:any, from:any,savedPosition:any) {
     };
   }
 }
-
-window.addEventListener('popstate', function(e) {
-  console.log(e)
-})

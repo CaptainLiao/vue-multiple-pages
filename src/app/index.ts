@@ -8,7 +8,7 @@ export default {
 }
 
 function start() {
-  new Vue({
+  return new Vue({
     router,
     render(h) {
       return h('div', {

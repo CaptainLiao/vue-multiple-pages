@@ -10,9 +10,6 @@ let routes = [
     path: "/home/home",
     name: "home",
     component: Home,
-    meta: {
-      keepAlive: true,
-    },
   },
   {
     path: "/home/abc",
@@ -24,7 +21,7 @@ let routes = [
       import(/* webpackChunkName: "home/abc" */ "@/views/home/abc.vue")
   },
   {
-    path: "/about",
+    path: "/home/about",
     name: "about",
     meta: {
       keepAlive: true,
