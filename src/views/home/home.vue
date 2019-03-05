@@ -9,9 +9,12 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import Navigator from '@/components/navigator.vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import Vue from "vue"
+
+import API from '@/services/api'
+
+import Navigator from '@/components/navigator.vue'
+import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
 
 export default Vue.extend({
   name: "home",
@@ -22,6 +25,12 @@ export default Vue.extend({
 
   created() {
     console.log('home created')
+    return API.querySome()
+      .then(res => {
+        console.log(res);
+      })
+      .catch(e => console.error(e)
+      )
   }
 })
 

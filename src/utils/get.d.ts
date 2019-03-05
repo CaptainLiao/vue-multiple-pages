@@ -1,0 +1,1 @@
+export default function get(target:object, keyPathStr:string, notFoundValue?:any): any;
