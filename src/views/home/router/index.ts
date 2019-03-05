@@ -1,15 +1,16 @@
 
 import router from "@/app/router"
-
-import NotFoundComponent from '@/components/notFoundComponent.vue'
 import Home from '@/views/home/home.vue'
 
 let routes = [
-  { path: '*', component: NotFoundComponent },
   {
     path: "/home/home",
     name: "home",
     component: Home,
+  },
+  {
+    path: "/",
+    redirect: '/home/home'
   },
   {
     path: "/home/abc",
