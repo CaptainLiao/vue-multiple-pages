@@ -3,18 +3,23 @@
     <img alt="Vue logo" src="../../assets/logo.png" />
     
     <div @click="tapPrint">打印</div>
-    <div id="page1" ref="page1">
-      <table width="100%"  border="0" cellpadding="0" cellspacing="0" style="page-break-after: always;">
-        <tr><td>第一页打印内容</td></tr>
-        <tr><td>第一页打印内容</td></tr>
-        <tr><td>第一页打印内容</td></tr>
-        <tr><td>第一页打印内容</td></tr>
-      </table>
+
+    <div ref="page1" style="page-break-after: always">
+      <div style="border: 1px solid #ccc;">第一页打印内容</div>
+      <div>第一页打印内容</div>
+      <div>第一页打印内容</div>
+      <div>第一页打印内容</div>
+      <div>第一页打印内容</div>
+      <div>第一页打印内容</div>
+      <div>第一页打印内容</div>
+      <div>第一页打印内容</div>
+      <div>第一页打印内容</div>
     </div>
-    <div id="page2" ref="page2">
-      <table width="100%"  border="0" cellpadding="0" cellspacing="0" id="content" >
-        <tr><td>第二页打印内容</td></tr>
-      </table>
+    <div ref="page2" style="page-break-after: always">
+      <div>第二页打印内容</div>
+    </div>
+    <div ref="page3" style="page-break-after: always">
+      <div>第三页打印内容</div>
     </div>
 
     <Navigator></Navigator>
@@ -45,10 +50,12 @@ export default Vue.extend({
       )
   },
 
-
   methods: {
     tapPrint() {
-      let body =`${this.$refs.page1.innerHTML} ${this.$refs.page2.innerHTML}`
+      let body = Object.keys(this.$refs)
+        .map(k => this.$refs[k].outerHTML)
+        .join('');
+
       print(body)
     }
   }
