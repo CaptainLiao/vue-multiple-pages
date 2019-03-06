@@ -1,0 +1,26 @@
+@import 'text';
+@import 'flex';
+
+html {
+  line-height: 1.4;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+input {
+  outline: 0;
+  border: 0;
+  background: transparent;
+}
+

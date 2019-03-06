@@ -6,6 +6,8 @@ Vue.use(Pagination)
 Vue.use(DatePicker)
 Vue.use(Timeline)
 
+import './scss/index.scss'
+
 
 Vue.config.productionTip = false;
 
