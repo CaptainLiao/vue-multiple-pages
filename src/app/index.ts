@@ -1,5 +1,11 @@
 import Vue from "vue";
 import router from "./router";
+import { Pagination, DatePicker, Timeline } from 'element-ui';
+
+Vue.use(Pagination)
+Vue.use(DatePicker)
+Vue.use(Timeline)
+
 
 Vue.config.productionTip = false;
 

@@ -22,23 +22,49 @@
       <div>第三页打印内容</div>
     </div>
 
-  <form id="myForm" ref="myForm" name="myForm" enctype="multipart/form-data">
+    <form id="myForm" ref="myForm" name="myForm" enctype="multipart/form-data">
+      <div>
+        <label for="username">Enter name:</label>
+        <input type="text" id="username" name="username">
+      </div>
+      <div>
+        <label for="useracc">Enter account number:</label>
+        <input type="text" id="useracc" name="useracc">
+      </div>
+      <div>
+        <label for="userfile">Upload file:</label>
+        <input type="file" id="userfile" name="userfile">
+      </div>
+      <input @click="tapSubmit" value="Submit!">
+    </form>
+
     <div>
-      <label for="username">Enter name:</label>
-      <input type="text" id="username" name="username">
+      <el-pagination
+        background
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+        :current-page.sync="currentPage3"
+        :page-size="100"
+        :prev-text="'上一页'"
+        :next-text="'下一页'"
+        layout="prev, pager, next, jumper"
+        :total="1000">
+      </el-pagination>
     </div>
-    <div>
-      <label for="useracc">Enter account number:</label>
-      <input type="text" id="useracc" name="useracc">
+
+    <div class="block">
+      <span class="demonstration">默认</span>
+      <el-date-picker
+        v-model="value1"
+        type="date"
+        placeholder="选择日期">
+      </el-date-picker>
     </div>
-    <div>
-      <label for="userfile">Upload file:</label>
-      <input type="file" id="userfile" name="userfile">
-    </div>
-    <input @click="tapSubmit" value="Submit!">
-  </form>
+
+
 
     <Navigator></Navigator>
+    
   </div>
 </template>
 
@@ -51,8 +77,19 @@ import Navigator from '@/components/navigator.vue'
 
 export default Vue.extend({
   name: "home",
+  data() {
+    return {
+      value1: ''
+    }
+  },
   components: {
     Navigator,
+  },
+
+  watch: {
+    value1(newV, oldV) {
+      console.log(new Date(newV).getTime(), oldV)
+    }
   },
 
   created() {
@@ -67,6 +104,9 @@ export default Vue.extend({
   },
 
   methods: {
+    handleCurrentChange(n:number) {
+      console.log(n)
+    },
     tapSubmit() {
       let formData = new FormData(this.$refs.myForm as HTMLFormElement);
       // let file = document.querySelector('[type=file]');
