@@ -5,7 +5,7 @@
     <div @click="tapPrint">打印</div>
 
     <div ref="page1" class="fx-row" style="page-break-after: always">
-      <div class="border">第一页打印内容</div>
+      <div class="border a-text-20">第一页打印内容</div>
       <div>第一页打印内容</div>
       <div>第一页打印内容</div>
       <div>第一页打印内容</div>
@@ -137,6 +137,6 @@ export default Vue.extend({
 
 <style lang="scss">
 .border {
-  border: 1px solid #ccc;
+  border: 1*$px solid #ccc;
 }
 </style>

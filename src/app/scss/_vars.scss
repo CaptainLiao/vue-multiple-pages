@@ -1,4 +1,6 @@
-$_: 1rem/20;
+//$_: 1rem/20;
+$_: 1px;
+$px: $_;
 
 $weight-map: (
   ultralight: 100,
