@@ -1,10 +1,90 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../../assets/logo.png" />
+    <!-- <img alt="Vue logo" src="../../assets/logo.png" /> -->
+
+    <div>
+      <div class="inline-block">
+        <div class="a-title">吃了吗</div>
+        <el-input v-model="input" placeholder="请输入内容"></el-input>
+      </div>
+
+      <div class="inline-block">
+        <div class="a-title">吃了吗</div>
+        <el-date-picker
+          v-model="value6"
+          type="daterange"
+          range-separator="至"
+          start-placeholder="开始日期"
+          end-placeholder="结束日期">
+        </el-date-picker>
+      </div>
+
+      <div class="inline-block">
+        <div class="a-title">吃了吗</div>
+        <el-select v-model="value" placeholder="请选择">
+          <el-option
+            v-for="item in myoptions"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+          </el-option>
+        </el-select>
+      </div>
+    </div>
+    <div>
+      <div class="inline-block">
+        <div class="a-title">吃了吗</div>
+        <el-select v-model="value" placeholder="请选择">
+          <el-option
+            v-for="item in myoptions"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+          </el-option>
+        </el-select>
+      </div>
+      <div class="inline-block">
+        <div class="a-title">吃了吗</div>
+        <el-select v-model="value" placeholder="请选择">
+          <el-option
+            v-for="item in myoptions"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+          </el-option>
+        </el-select>
+      </div>
+      <div class="inline-block">
+        <div class="a-title">吃了吗</div>
+        <el-select v-model="value" placeholder="请选择">
+          <el-option
+            v-for="item in myoptions"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+          </el-option>
+        </el-select>
+      </div>
+
+
+
+      <div class="inline-block">
+        <div class="a-title">吃了吗</div>
+        <el-select v-model="value" placeholder="请选择">
+          <el-option
+            v-for="item in myoptions"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+          </el-option>
+        </el-select>
+      </div>
+    </div>
 
     <div @click="tapPrint">打印</div>
+    <i style="color: red" class="el-icon-location"></i>
 
-    <div ref="page1" class="fx-row" style="page-break-after: always">
+    <div ref="page1" class="fx-row" style="page-break-after: always;display:none">
       <div class="border a-text-20">第一页打印内容</div>
       <div>第一页打印内容</div>
       <div>第一页打印内容</div>
@@ -79,7 +159,24 @@ export default Vue.extend({
   name: "home",
   data() {
     return {
-      value1: ''
+      value1: '',
+      myoptions: [{
+        value: '选项1',
+        label: '黄金糕'
+      }, {
+        value: '选项2',
+        label: '双皮奶'
+      }, {
+        value: '选项3',
+        label: '蚵仔煎'
+      }, {
+        value: '选项4',
+        label: '龙须面'
+      }, {
+        value: '选项5',
+        label: '北京烤鸭'
+      }],
+      value: ''
     }
   },
   components: {
@@ -139,4 +236,8 @@ export default Vue.extend({
 .border {
   border: 1*$px solid #ccc;
 }
+
+
+
+
 </style>

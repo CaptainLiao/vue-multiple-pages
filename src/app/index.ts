@@ -1,10 +1,18 @@
 import Vue from "vue";
 import router from "./router";
-import { Pagination, DatePicker, Timeline } from 'element-ui';
+import { Pagination, DatePicker, Timeline, Select,
+  Option,
+  OptionGroup,
+  Input,
+} from 'element-ui';
 
 Vue.use(Pagination)
 Vue.use(DatePicker)
 Vue.use(Timeline)
+Vue.use(Select)
+Vue.use(Option)
+Vue.use(OptionGroup)
+Vue.use(Input)
 
 import './scss/index.scss'
 

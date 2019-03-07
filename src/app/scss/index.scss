@@ -24,3 +24,47 @@ input {
   background: transparent;
 }
 
+#app {
+  .inline-block {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 6px;
+    .a-title {
+      position: absolute;
+      left: 10px;
+      top: 9px;
+      z-index: 1;
+      color: #ddd;
+    }
+  }
+
+  // input
+  .el-input {
+    width: 240px;
+    .el-input__inner {
+      padding-left: 120px;
+    }
+  }
+
+  // select
+  .el-select {
+    width: 240px;
+    .el-input__inner {
+      padding-left: 160px;
+      padding-right: 0;
+    }
+  }
+
+  // 选择日期范围
+  .el-date-editor--daterange {
+    width: 500px;
+    .el-range__icon {
+      display: none;
+    }
+    .el-range-input:first-of-type {
+      padding-left: 100px;
+    }
+  }
+}
+
