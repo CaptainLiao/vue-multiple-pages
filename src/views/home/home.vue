@@ -2,13 +2,27 @@
   <div class="home">
     <!-- <img alt="Vue logo" src="../../assets/logo.png" /> -->
 
+    <div class="header fx-row fx-m-between">
+      <a class="logo" href="/">
+        <img src="../../assets/logo.png" alt="vue logo">
+        <span>Vue.js</span>
+      </a>
+      <div>
+        <div class="logo2">
+          <img src="../../assets/logo.png" alt="vue logo">
+          <span>Vue.js</span>
+        </div>
+        <div>吃了吗</div>
+      </div>
+    </div>
+
     <div>
-      <div class="inline-block">
+      <div class="a-input-block">
         <div class="a-title">吃了吗</div>
         <el-input v-model="input" placeholder="请输入内容"></el-input>
       </div>
 
-      <div class="inline-block">
+      <div class="a-input-block">
         <div class="a-title">吃了吗</div>
         <el-date-picker
           v-model="value6"
@@ -19,7 +33,7 @@
         </el-date-picker>
       </div>
 
-      <div class="inline-block">
+      <div class="a-input-block">
         <div class="a-title">吃了吗</div>
         <el-select v-model="value" placeholder="请选择">
           <el-option
@@ -32,7 +46,7 @@
       </div>
     </div>
     <div>
-      <div class="inline-block">
+      <div class="a-input-block">
         <div class="a-title">吃了吗</div>
         <el-select v-model="value" placeholder="请选择">
           <el-option
@@ -43,7 +57,7 @@
           </el-option>
         </el-select>
       </div>
-      <div class="inline-block">
+      <div class="a-input-block">
         <div class="a-title">吃了吗</div>
         <el-select v-model="value" placeholder="请选择">
           <el-option
@@ -54,7 +68,7 @@
           </el-option>
         </el-select>
       </div>
-      <div class="inline-block">
+      <div class="a-input-block">
         <div class="a-title">吃了吗</div>
         <el-select v-model="value" placeholder="请选择">
           <el-option
@@ -68,7 +82,7 @@
 
 
 
-      <div class="inline-block">
+      <div class="a-input-block">
         <div class="a-title">吃了吗</div>
         <el-select v-model="value" placeholder="请选择">
           <el-option
@@ -237,7 +251,23 @@ export default Vue.extend({
   border: 1*$px solid #ccc;
 }
 
+.header {
+  padding: 60px 0 0 0;
+  height: 40px;
+}
 
+.logo img {
+  vertical-align: text-bottom;
+  margin-right: 6px;
+  width: 40px;
+  height: 40px;
+}
+.logo2 img {
+  vertical-align: text-bottom;
+  margin-right: 6px;
+  width: 20px;
+  height: 20px;
+}
 
 
 </style>
