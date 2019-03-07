@@ -204,8 +204,6 @@ export default Vue.extend({
   },
 
   created() {
-    console.log('home created')
-
     return API.querySome()
       .then(res => {
         console.log(res);

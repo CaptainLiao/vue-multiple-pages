@@ -1,3 +1,5 @@
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 module.exports = {
   configureWebpack: {
     externals: {
@@ -5,6 +7,9 @@ module.exports = {
       'vue-router': 'VueRouter',
       'vuex': 'Vuex',
     },
+    plugins: [
+      new BundleAnalyzerPlugin()
+    ]
   },
 
   chainWebpack: config => {
