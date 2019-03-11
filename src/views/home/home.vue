@@ -1,6 +1,15 @@
 <template>
   <div class="home">
     <!-- <img alt="Vue logo" src="../../assets/logo.png" /> -->
+    <el-row>
+      <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="12"><div class="grid-content bg-purple-light"></div></el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="8"><div class="grid-content bg-purple-light"></div></el-col>
+      <el-col :span="8"><div class="grid-content bg-purple-light"></div></el-col>
+    </el-row>
 
     <div class="header fx-row fx-m-between">
       <a class="logo" href="/">
@@ -267,5 +276,24 @@ export default Vue.extend({
   height: 20px;
 }
 
+  .el-row {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
+
+  .el-col {
+    min-height: 36px;
+    border:1px solid #ccc;
+    border-left: none;
+    &:first-of-type {
+      border-left: 1px solid #ccc;
+    }
+  }
+  .row-bg {
+    padding: 10px 0;
+    background-color: #f9fafc;
+  }
 </style>

@@ -1,4 +1,4 @@
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   configureWebpack: {
@@ -8,7 +8,7 @@ module.exports = {
       'vuex': 'Vuex',
     },
     plugins: [
-      new BundleAnalyzerPlugin()
+      //new BundleAnalyzerPlugin()
     ]
   },
 

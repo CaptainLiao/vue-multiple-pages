@@ -4,8 +4,12 @@ import { Pagination, DatePicker, Timeline, Select,
   Option,
   OptionGroup,
   Input,
+  Row,
+  Col,
 } from 'element-ui';
 
+Vue.use(Row)
+Vue.use(Col)
 Vue.use(Pagination)
 Vue.use(DatePicker)
 Vue.use(Timeline)
@@ -13,6 +17,7 @@ Vue.use(Select)
 Vue.use(Option)
 Vue.use(OptionGroup)
 Vue.use(Input)
+
 
 import './scss/index.scss'
 
