@@ -29,12 +29,13 @@ module.exports = {
   //   about: {
   //     entry: 'src/views/about-main.js',
 
-  //     //chunks: ['chunk-vendors', 'chunk-common', 'about']
+  //     chunks: ['chunk-vendors', 'chunk-common', 'about']
   //   },
-  //   'home/home': {
+  //   // 这里的入口名称和路由相对应
+  //   'home': {
   //     entry: 'src/views/home/_entry.js',
 
-  //     //chunks: ['chunk-vendors', 'chunk-common', 'home/home']
+  //     chunks: ['chunk-vendors', 'chunk-common', 'home']
   //   },
   // }
 
