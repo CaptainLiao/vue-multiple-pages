@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <Layout></Layout>
     <!-- <img alt="Vue logo" src="../../assets/logo.png" /> -->
     <el-row>
       <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>
@@ -10,20 +11,6 @@
       <el-col :span="8"><div class="grid-content bg-purple-light"></div></el-col>
       <el-col :span="8"><div class="grid-content bg-purple-light"></div></el-col>
     </el-row>
-
-    <div class="header fx-row fx-m-between">
-      <a class="logo" href="/">
-        <img src="../../assets/logo.png" alt="vue logo">
-        <span>Vue.js</span>
-      </a>
-      <div>
-        <div class="logo2">
-          <img src="../../assets/logo.png" alt="vue logo">
-          <span>Vue.js</span>
-        </div>
-        <div>吃了吗</div>
-      </div>
-    </div>
 
     <div>
       <div class="a-input-block">
@@ -175,7 +162,7 @@
 import Vue from "vue"
 import API from '@/services/api'
 import print from '@/utils/print'
-
+import Layout from '@/views/layout/layout.vue'
 import Navigator from '@/components/navigator.vue'
 
 export default Vue.extend({
@@ -204,6 +191,7 @@ export default Vue.extend({
   },
   components: {
     Navigator,
+    Layout
   },
 
   watch: {
@@ -258,23 +246,7 @@ export default Vue.extend({
   border: 1*$px solid #ccc;
 }
 
-.header {
-  padding: 60px 0 0 0;
-  height: 40px;
-}
 
-.logo img {
-  vertical-align: text-bottom;
-  margin-right: 6px;
-  width: 40px;
-  height: 40px;
-}
-.logo2 img {
-  vertical-align: text-bottom;
-  margin-right: 6px;
-  width: 20px;
-  height: 20px;
-}
 
   .el-row {
     margin-bottom: 20px;

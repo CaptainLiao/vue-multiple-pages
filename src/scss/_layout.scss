@@ -10,6 +10,15 @@
     position: relative;
   }
 
+  // 渲染主体内容区
+  .app-main {
+    /*84 = navbar + tags-view = 50 +34 */
+    min-height: calc(100vh - 84px);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
   // 侧边栏 Sidebar container
   .sidebar-container {
     transition: width 0.28s;
