@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <Layout></Layout>
     <!-- <img alt="Vue logo" src="../../assets/logo.png" /> -->
     <el-row>
       <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>
@@ -162,7 +161,6 @@
 import Vue from "vue"
 import API from '@/services/api'
 import print from '@/utils/print'
-import Layout from '@/views/layout/layout.vue'
 import Navigator from '@/components/navigator.vue'
 
 export default Vue.extend({
@@ -190,8 +188,7 @@ export default Vue.extend({
     }
   },
   components: {
-    Navigator,
-    Layout
+    Navigator
   },
 
   watch: {
@@ -201,12 +198,7 @@ export default Vue.extend({
   },
 
   created() {
-    return API.querySome()
-      .then(res => {
-        console.log(res);
-      })
-      .catch(e => console.error(e)
-      )
+
   },
 
   methods: {

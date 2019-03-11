@@ -1,9 +1,8 @@
 <template>
   <div class="app-wrapper">
-    <sidebar class="sidebar-container"/>
+    <sidebar class="sidebar-wrapper" />
     <div class="main-container">
       <navbar/>
-      <tags-view/>
       <app-main/>
     </div>
   </div>
@@ -22,6 +21,6 @@ export default {
 }
 </script>
 
-<style rel="stylesheet/scss" lang="scss" scoped>
+<style lang="scss" scoped>
 
 </style>

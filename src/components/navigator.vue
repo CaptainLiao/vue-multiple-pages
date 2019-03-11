@@ -14,13 +14,14 @@ import vue from 'vue'
 export default vue.extend({
   methods: {
     toHome() {
-      this.$router.push({path: '/home/home'})
+      console.log(111)
+      this.$router.push({name: '/home/home'})
     },
     toAbc() {
-      this.$router.push({path: '/home/abc'})
+      this.$router.push({name: '/home/abc'})
     },
     toAbout() {
-      this.$router.push({path: '/home/about'})
+      this.$router.push({name: '/home/about'})
       //window.location.href ='../about'
     },
   }
