@@ -1,6 +1,9 @@
+// ！！！不需要再单独引入！！！通过 webpack sass-resources-loader 全局注入
+
 //$_: 1rem/20;
 $_: 1px;
 $px: $_;
+$sideBarWidth: 180px;
 
 $weight-map: (
   ultralight: 100,

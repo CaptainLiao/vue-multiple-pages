@@ -1,0 +1,27 @@
+<template>
+  <div class="app-wrapper">
+    <sidebar class="sidebar-container"/>
+    <div class="main-container">
+      <navbar/>
+      <tags-view/>
+      <app-main/>
+    </div>
+  </div>
+</template>
+
+<script>
+import { Navbar, Sidebar, AppMain, TagsView } from './components'
+
+export default {
+  name: 'Layout',
+  components: {
+    Navbar,
+    Sidebar,
+    AppMain,
+  }
+}
+</script>
+
+<style rel="stylesheet/scss" lang="scss" scoped>
+
+</style>

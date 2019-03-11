@@ -19,7 +19,7 @@ module.exports = {
         .use('sass-resources-loader')
         .loader('sass-resources-loader')
         .options({
-          resources: './src/app/scss/_vars.scss'
+          resources: './src/scss/_vars.scss'
         })
         .end()
     })

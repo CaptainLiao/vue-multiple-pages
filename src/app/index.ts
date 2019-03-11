@@ -19,7 +19,7 @@ Vue.use(OptionGroup)
 Vue.use(Input)
 
 
-import './scss/index.scss'
+import '@/scss/index.scss'
 
 
 Vue.config.productionTip = false;
