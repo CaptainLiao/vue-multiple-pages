@@ -1,9 +1,6 @@
 <template>
   <div class="home">
     <!-- <img alt="Vue logo" src="../../assets/logo.png" /> -->
-    <div>
-<iframe src="javascript:void(function() {console.log(1)}())" frameborder="0"></iframe>
-    </div>
     
     <el-row>
       <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>

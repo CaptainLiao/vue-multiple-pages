@@ -1,4 +1,5 @@
 import Vue from "vue";
+import store from '@/store/index'
 import router from "./router";
 import { Pagination, DatePicker, Timeline, Select,
   Option,
@@ -36,6 +37,8 @@ export default {
 
 function start() {
   return new Vue({
+    el: '#app',
+    store,
     router,
     render(h) {
       return h('div', {
