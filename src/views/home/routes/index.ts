@@ -1,11 +1,12 @@
 
-import Layout from '@/views/layout/layout.vue'
+import Layout from '_c/layout/layout.vue'
 import Home from '@/views/home/home.vue'
 
 export default [
   {
     path: '/home',
     component: Layout,
+    redirect: '/home/index',
     meta: {
       title: '第一栏'
     },
@@ -15,14 +16,16 @@ export default [
         name: "/home/home",
         component: Home,
         meta: {
-          title: '首页'
+          title: '首页',
+
         },
       },
       {
         path: "abc",
         name: "/home/abc",
         meta: {
-          title: 'abc'
+          title: 'abc',
+          keepAlive: true,
         },
         component: () =>import(/* webpackChunkName: "home/abc" */ "@/views/home/abc.vue")
       },

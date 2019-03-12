@@ -1,6 +1,10 @@
 <template>
   <div class="home">
     <!-- <img alt="Vue logo" src="../../assets/logo.png" /> -->
+    <div>
+<iframe src="javascript:void(function() {console.log(1)}())" frameborder="0"></iframe>
+    </div>
+    
     <el-row>
       <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>
       <el-col :span="12"><div class="grid-content bg-purple-light"></div></el-col>
@@ -197,8 +201,14 @@ export default Vue.extend({
     }
   },
 
-  created() {
+  activated() {
+    console.log("activated");
+    
+  },
 
+  created() {
+    console.log('created');
+    
   },
 
   methods: {

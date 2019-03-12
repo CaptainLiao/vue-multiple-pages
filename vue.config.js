@@ -1,6 +1,8 @@
+const path = require('path')
 //const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
+  productionSourceMap: false,
   configureWebpack: {
     externals: {
       'vue': 'Vue',
@@ -23,6 +25,9 @@ module.exports = {
         })
         .end()
     })
+
+    config.resolve.alias
+      .set('_c', path.join(__dirname, 'src/components'))
   },
 
   // pages: {
