@@ -37,7 +37,6 @@ export default {
 
 function start() {
   return new Vue({
-    el: '#app',
     store,
     router,
     render(h) {

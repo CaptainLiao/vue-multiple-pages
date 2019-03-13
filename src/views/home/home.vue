@@ -161,6 +161,7 @@
 <script lang="ts">
 import Vue from "vue"
 import API from '@/services/api'
+import {removeToken} from '@/services/request/token'
 import print from '@/utils/print'
 import Navigator from '@/components/navigator.vue'
 
@@ -198,14 +199,9 @@ export default Vue.extend({
     }
   },
 
-  activated() {
-    console.log("activated");
-    
-  },
-
   created() {
-    console.log('created');
-    
+    removeToken()
+    console.warn('remove token in home.vue');
   },
 
   methods: {

@@ -1,8 +1,15 @@
 
 import Layout from '_c/layout/layout.vue'
 import Home from '@/views/home/home.vue'
+import Login from '@/views/login.vue'
 
 export default [
+  {
+    path: '/login',
+    component: Login,
+    name: 'login',
+    hidden: true,
+  },
   {
     path: '/home',
     component: Layout,

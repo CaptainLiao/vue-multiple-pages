@@ -1,4 +1,4 @@
-import requst from './request'
+import requst from './request/index'
 
 export default {
   querySome(config?:object) {
