@@ -4,6 +4,7 @@ import get from '@/utils/get'
 const request = (config: object) => {
   return axios({
     baseURL: 'https://www.jjyl.top',
+    withCredentials: true,
     ...config
   })
   .then(

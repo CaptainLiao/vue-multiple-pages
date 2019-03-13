@@ -20,8 +20,6 @@ export default router
 const whiteList:Array<string> = ['']
 
 router.beforeEach((to, from, next) => {
-  console.log(getToken());
-  
   if (!getToken()) {
     if (to.path === '/login') return next();
     
