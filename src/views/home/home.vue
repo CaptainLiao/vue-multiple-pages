@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <el-progress :percentage="90" status=""></el-progress>
     <!-- <img alt="Vue logo" src="../../assets/logo.png" /> -->
     
     <el-row>
@@ -200,7 +201,8 @@ export default Vue.extend({
   },
 
   created() {
-    removeToken()
+    //removeToken()
+    this.tapSubmit()
     console.warn('remove token in home.vue');
   },
 

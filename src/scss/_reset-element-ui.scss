@@ -41,3 +41,11 @@ $marginRight: 20px;
     }
   }
 }
+#app {
+  .el-progress-bar {
+    padding-right: 0;
+  }
+  .el-progress__text {
+    display: none;
+  }
+}

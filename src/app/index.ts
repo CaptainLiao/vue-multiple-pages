@@ -10,6 +10,7 @@ import { Pagination, DatePicker, Timeline, Select,
   Menu,
   Submenu,
   MenuItem,
+  Progress
 } from 'element-ui';
 
 Vue.use(Row)
@@ -24,6 +25,7 @@ Vue.use(Input)
 Vue.use(Menu)
 Vue.use(Submenu)
 Vue.use(MenuItem)
+Vue.use(Progress)
 
 
 import '@/scss/index.scss'
